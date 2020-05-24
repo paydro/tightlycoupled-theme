@@ -36,12 +36,12 @@ h2, h3, h4, h5, h6 {
 }
 
 code, .code {
-  font-family: "Courier Prime", monospace;
-  font-size: 1.3rem;
-  /* color: #111; */
+  font-family: "Cousine", monospace;
+  font-size: 1.2rem;
 }
 
 pre code[class*=language-] {
+  font-family: "Cousine", monospace;
   font-size: 1rem;
 }
 
