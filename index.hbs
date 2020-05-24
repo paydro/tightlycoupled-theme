@@ -1,15 +1,43 @@
 {{!< default}}
 
-<div class="gh-page lh-copy w-100-l">
-  <div class="gh-container">
+<div class="lh-copy w-100-l">
+  {{#foreach posts}}
+  <article class="gh-article {{post_class}} lh-copy w-100-l">
+    <header>
+      <h1 class="gh-title mb0 tc mw7-ns center">
+          <a href="{{url}}" class="no-underline">
+            {{title}}
+          </a>
+        </h1>
+      <div class="gh-post-meta tc sans-serif f5">
+        <time datetime="{{date format="YYYY-MM-DD"}}">
+          {{date format="MMM DD, YYYY"}}
+        </time>
+      </div>
 
-    <div class="gh-postfeed measure center">
-      {{#foreach posts}}
+      {{#if custom_excerpt}}
+        <p class="measure center" >{{custom_excerpt}}</p>
+      {{/if}}
 
-      {{> "card"}} {{!-- partials/card.hbs --}}
+      {{#if feature_image}}
+        <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
+      {{/if}}
+    </header>
 
-      {{/foreach}}
+    <div class="gh-content gh-canvas measure center">
+      {{content}}
     </div>
+  </article>
 
-  </div>
+  {{/foreach}}
 </div>
+
+
+<footer class="measure center">
+  <nav class="w-100 mw8-ns flex justify-center f5">
+    <ul class="w-100 list pl0 cf mt0 mb0 mw8-ns flex flex-wrap justify-center  bb bt">
+      <li class="pa2 ttu f5"><a href="#site">Back Up</a></li>
+      <li class="pa2 ttu f5"><a href="/writings">writings</a></li>
+    </ul>
+  </nav>
+</footer>

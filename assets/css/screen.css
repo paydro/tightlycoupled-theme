@@ -35,20 +35,23 @@ h2, h3, h4, h5, h6 {
   content: none;
 }
 
+code[class*=language-],
 code, .code {
   font-family: "Courier Prime", monospace;
-  background-color: #eee;
+  font-size: 1rem;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: transparent;
+  padding: 0;
 }
 
 pre code {
   background-color: transparent;
 }
 
-
-
-
 #site {
-  /* width: 800px; */
   margin: 0 auto;
 }
 
@@ -90,6 +93,26 @@ article figcaption {
   text-align: center;
   font-size: .875rem;
   font-family: "Lato";
+}
+
+article {
+}
+
+
+.home-template article:after {
+  content: "❋ ❋ ❋";
+  color: #ccc;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-template article:last-child:after {
+  content: ' ';
+  padding-top: 0;
+  margin-bottom: 0;
 }
 
 /* Default breakout and fullpage images to full width of screen */
