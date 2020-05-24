@@ -1,0 +1,16 @@
+{{!< default}}
+
+{{#get "posts" include="tags"}}
+  <div class="lh-copy w-75-ns measure center">
+    <ul class="list pl0">
+      {{#foreach posts as |post| }}
+        {{#post}}
+        <li>
+          <time datetime="{{date format="YYYY-MM-DD"}}" class="dib tr w4 sans-serif f5">{{date format="MMM DD, YYYY"}}</time>
+          <a href="{{url}}" class="">{{title}}</a>
+        </li>
+        {{/post}}
+      {{/foreach}}
+    </ul>
+  </div>
+{{/get}}

@@ -2,96 +2,72 @@
 <html lang="{{@site.lang}}">
 <head>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
-    <title>{{meta_title}}</title>
 
-    {{ghost_head}}
-    {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+
+  <title>{{meta_title}}</title>
+
+  {{ghost_head}}
+  {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="{{asset "built/tachyons.css"}}" /> -->
+  <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
 </head>
-<body class="{{body_class}}">
-<div class="gh-viewport">
+<body class="{{body_class}} serif mid-gray bg-near-white pa3">
+  <div id="site" class="mw-100 center ">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+    <header id="site-header" class="mb0 measure center sans-serif">
+      <nav class="sans-serif cf">
+        <h1 class="mb1 mt0 tc f4 sans-serif b ttu">
+          <a class="title no-underline" href="{{@site.url}}">{{@site.title}}</a>
+        </h1>
+        {{navigation}}
+      </nav>
+    </header>
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
-                </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
-    </nav>
-</header>
+    <main class="mw8-ns center">
+      {{{body}}}
+    </main>
 
-<main class="gh-main">
+    <footer class="mb0 center pt2 pb4 w-100 measure mt4">
+      <div class="f6 tc light-silver">&copy; 2019-{{date format="YYYY"}} Peter Bui</div>
+    </footer>
+  </div>
 
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
 
-</main>
 
-<footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </div>
-    </div>
-</footer>
+  {{!-- <footer> --}}
 
-</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-{{!-- <foot> --}}
+    {{#if pagination.pages}}
+    <script>
+var maxPages = parseInt('{{pagination.pages}}');
+    </script>
+    <script src="{{asset "built/infinitescroll.js"}}"></script>
+    {{/if}}
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-{{#if pagination.pages}}
-<script>
-    var maxPages = parseInt('{{pagination.pages}}');
-</script>
-<script src="{{asset "built/infinitescroll.js"}}"></script>
-{{/if}}
-
-<script>
+    <script>
 $(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
+  // Mobile Menu Trigger
+  $('.gh-burger').click(function () {
+    $('body').toggleClass('gh-head-open');
+  });
 });
-</script>
+    </script>
 
-{{#is "post, page"}}
+    {{#is "post, page"}}
 <script src="{{asset "built/jquery.fitvids.js"}}"></script>
 <script>
 var images = document.querySelectorAll('.kg-gallery-image img');
@@ -107,10 +83,10 @@ $(document).ready(function () {
     $postContent.fitVids();
 });
 </script>
-{{/is}}
+    {{/is}}
 
-{{ghost_foot}}
-{{!-- Outputs important scripts - should always be included before closing body tag --}}
+    {{ghost_foot}}
+    {{!-- Outputs important scripts - should always be included before closing body tag --}}
 
 </body>
 </html>

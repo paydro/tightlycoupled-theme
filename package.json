@@ -1,7 +1,7 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A custom theme for ghost",
-    "demo": "https://starter.ghost.io",
+    "name": "tightlycoupled-theme",
+    "description": "tightlycoupled theme",
+    "demo": "https://tightlycoupled.io",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=3.0.0",
@@ -18,36 +18,39 @@
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
         "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
+
+        "start": "npm run build:watch",
+        "mutations": "immutable-css src/tachyons.css --strict",
+        "build": "npm run build:css && npm run build:minify",
+        "build:css": "tachyons src/tachyons.css > css/tachyons.css",
+        "build:minify": "tachyons src/tachyons.css --minify > css/tachyons.min.css",
+        "build:watch": "watch \"npm run build\" ./src/"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Peter Bui",
+        "email": "paydrobui@gmail.com",
+        "url": "https://tightlycoupled.io"
     },
     "gpm": {
         "type": "theme",
         "categories": [
-            "Minimal",
-            "Magazine"
+            "Minimal"
         ]
     },
     "keywords": [
-        "ghost",
         "theme",
         "ghost-theme"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/paydro/tightlycoupled-theme.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "9.7.6",
         "cssnano": "4.1.10",
         "gscan": "3.4.1",
-        "gulp": "4.0.2",
+        "gulp": "^4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "8.0.0",
         "gulp-sourcemaps": "2.6.5",
@@ -57,13 +60,20 @@
         "gulp-zip": "5.0.1",
         "postcss-color-function": "4.1.0",
         "postcss-custom-properties": "9.1.1",
-        "postcss-easy-import": "3.0.0"
+        "postcss-easy-import": "3.0.0",
+        "tachyons": "4.12.0",
+        "copy-files": "^0.1.0",
+        "immutable-css-cli": "^1.1.1",
+        "normalize.css": "^8.0.0",
+        "tachyons-modules": "^1.1.10",
+        "tachyons-cli": "^1.3.2",
+        "watch": "^1.0.2"
     },
     "browserslist": [
         "defaults"
     ],
     "config": {
-        "posts_per_page": 15,
+        "posts_per_page": 30,
         "image_sizes": {
             "xxs": {
                 "width": 30
