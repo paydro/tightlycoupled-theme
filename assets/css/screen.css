@@ -14,7 +14,7 @@
 }
 
 h1 {
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   font-weight: normal;
   /* font-style: italic; */
   color: #333;
@@ -22,7 +22,7 @@ h1 {
 
 
 h2, h3, h4, h5, h6 {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   color: #333;
 }
@@ -67,7 +67,6 @@ nav a:visited {
   color: rgba(0,0,0,.7);
 }
 
-
 a, a:visited {
   color: #000;
 }
@@ -75,6 +74,7 @@ a, a:visited {
 a:hover {
   color: #555;
 }
+
 a:active {
   color: red;
 }
@@ -94,10 +94,6 @@ article figcaption {
   font-size: .875rem;
   font-family: "Lato";
 }
-
-article {
-}
-
 
 .home-template article:after {
   content: "❋ ❋ ❋";

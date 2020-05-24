@@ -2,39 +2,39 @@
 
 {{#post}}
 
-  <article class="gh-article {{post_class}} lh-copy w-100-l">
+<article class="gh-article {{post_class}} lh-copy w-100-l">
 
-    <header>
-      <h1 class="gh-title mb0 tc mw7-ns center">{{title}}</h1>
-      <div class="gh-post-meta tc sans-serif f5">
-        <time datetime="{{date format="YYYY-MM-DD"}}">
-          {{date format="MMM DD, YYYY"}}
-        </time>
-      </div>
-
-      {{#if custom_excerpt}}
-        <p class="measure center" >{{custom_excerpt}}</p>
-      {{/if}}
-
-      {{#if feature_image}}
-        <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
-      {{/if}}
-    </header>
-
-    <div class="gh-content gh-canvas measure center">
-      {{content}}
+  <header>
+    <h1 class="gh-title mb0 tc mw7-ns center">{{title}}</h1>
+    <div class="gh-post-meta tc sans-serif f5">
+      <time datetime="{{date format="YYYY-MM-DD"}}">
+        {{date format="MMM DD, YYYY"}}
+      </time>
     </div>
 
-    <footer class="measure center">
-      <nav class="w-100 mw8-ns flex justify-center f5">
-        <ul class="w-100 list pl0 cf mt0 mb0 mw8-ns flex flex-wrap justify-center  bb bt">
-          <li class="pa2 ttu f5"><a href="#site">Back Up</a></li>
-          <li class="pa2 ttu f5"><a href="/writings">writings</a></li>
-        </ul>
-      </nav>
-    </footer>
+    {{#if custom_excerpt}}
+    <p class="measure center" >{{custom_excerpt}}</p>
+    {{/if}}
 
-  </article>
+    {{#if feature_image}}
+    <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
+    {{/if}}
+  </header>
+
+  <div class="gh-content gh-canvas measure center">
+    {{content}}
+  </div>
+
+  <footer class="measure center">
+    <nav class="w-100 mw8-ns flex justify-center f5">
+      <ul class="w-100 list pl0 cf mt0 mb0 mw8-ns flex flex-wrap justify-center  bb bt">
+        <li class="pa2 ttu f5"><a href="#site">Back Up</a></li>
+        <li class="pa2 ttu f5"><a href="/writings">writings</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</article>
 
 
 {{/post}}

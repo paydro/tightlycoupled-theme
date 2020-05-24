@@ -1,7 +1,22 @@
 {{!< default}}
 
+{{#post}}
+<section class="gh-article {{post_class}} lh-copy w-100-l">
+
+  <header class="measure center">
+    <h1 class="gh-title mb0 tc mw7-ns center">{{title}}</h1>
+  </header>
+
+  <div class="measure lh-copy center">
+    {{content}}
+  </div>
+</section>
+{{/post}}
+
+
+
 {{#get "posts" include="tags"}}
-  <div class="lh-copy w-75-ns measure center">
+  <div id="writings" class="lh-copy w-75-ns measure center">
     <ul class="list pl0">
       {{#foreach posts as |post| }}
         {{#post}}
