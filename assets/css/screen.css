@@ -112,6 +112,10 @@ article figcaption {
 }
 
 /* Default breakout and fullpage images to full width of screen */
+.kg-image img {
+  margin-left: auto;
+  margin-right: auto;
+}
 .kg-width-wide .kg-image,
 .kg-width-full .kg-image {
   display: block;
