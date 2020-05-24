@@ -35,9 +35,13 @@ h2, h3, h4, h5, h6 {
   content: none;
 }
 
-code[class*=language-],
 code, .code {
   font-family: "Courier Prime", monospace;
+  font-size: 1.3rem;
+  /* color: #111; */
+}
+
+pre code[class*=language-] {
   font-size: 1rem;
 }
 
