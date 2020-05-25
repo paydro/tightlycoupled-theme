@@ -199,11 +199,10 @@ article figcaption {
 /* Tachyons medium (*-m) overrides -- copied definition from tachyons */
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .kg-width-wide .kg-image {
-    max-width: none;
-    transform: translateX(-9rem);
-    margin-left: auto;
-    /* Width of the main column of text */
-    width: 48rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 64rem;
+    width: 100vw;
   }
 
   .kg-gallery-container {
@@ -224,12 +223,10 @@ article figcaption {
 /* Tachyons large (*-l) overrides -- copied definition from tachyons */
 @media screen and (min-width: 60em) {
   .kg-width-wide .kg-image {
-    max-width: none;
-    transform: translateX(-17rem);
-    margin-left: auto;
-
-    /* Width of <main> */
-    width: 64rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 64rem;
+    width: 100vw;
   }
 
   .kg-width-full .kg-image {
