@@ -1,20 +1,40 @@
-/* Custom overrides */
-/* ---------------------------------------------------------- */
+/* Tachyons Not Small (*-ns) Overrides -- copied definition from tachyons */
+@media screen and (min-width: 30em) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+/* Tachyons medium (*-m) overrides -- copied definition from tachyons */
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Tachyons large (*-l) overrides -- copied definition from tachyons */
+@media screen and (min-width: 60em) {
+  html {
+    font-size: 20px;
+  }
+}
+
 
 .serif {
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 .sans-serif {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .merriweather {
-  font-family: Merriweather;
+  font-family: 'Merriweather';
 }
 
 h1 {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-weight: normal;
   /* font-style: italic; */
   color: #333;
@@ -37,12 +57,13 @@ h2, h3, h4, h5, h6 {
 
 code, .code {
   font-family: "Cousine", monospace;
-  font-size: 1.2rem;
 }
 
+pre code,
 pre code[class*=language-] {
   font-family: "Cousine", monospace;
   font-size: 1rem;
+  overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
@@ -130,6 +151,7 @@ article figcaption {
   width: 100vw;
 }
 
+/* Gallery */
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
@@ -176,46 +198,37 @@ article figcaption {
 
 /* Tachyons medium (*-m) overrides -- copied definition from tachyons */
 @media screen and (min-width: 30em) and (max-width: 60em) {
-  body {
-    font-size: 18px;
-  }
-
   .kg-width-wide .kg-image {
-    margin-left: -25rem;
     max-width: none;
-    transform: translateX(11.75rem);
-
+    transform: translateX(-9rem);
+    margin-left: auto;
     /* Width of the main column of text */
-    width: 64rem;
+    width: 48rem;
   }
 
   .kg-gallery-container {
     margin-left: 50%;
     transform: translateX(-50%);
-    max-width: 64rem;
+    max-width: 48rem;
     width: 100vw;
   }
 
   .kg-embed-card {
-    margin-left: -25rem;
+    margin-left: auto;
     max-width: none;
-    transform: translateX(11.75rem);
-    width: 64rem;
+    transform: translateX(-9rem);
+    width: 48rem;
   }
 }
 
 /* Tachyons large (*-l) overrides -- copied definition from tachyons */
 @media screen and (min-width: 60em) {
-  body {
-    font-size: 20px;
-  }
-
   .kg-width-wide .kg-image {
-    margin-left: -25rem;
     max-width: none;
-    transform: translateX(11.75rem);
+    transform: translateX(-17rem);
+    margin-left: auto;
 
-    /* Width of the main column of text */
+    /* Width of <main> */
     width: 64rem;
   }
 
@@ -238,11 +251,9 @@ article figcaption {
 
   /* Embed card */
   .kg-embed-card {
-    margin-left: -25rem;
+    margin-left: auto;
     max-width: none;
-    transform: translateX(11.75rem);
-
-    /* Width of the main column of text */
+    transform: translateX(-17rem);
     width: 64rem;
   }
 }
