@@ -5,18 +5,18 @@
   <article class="gh-article {{post_class}} lh-copy w-100-l">
     <header>
       <h1 class="gh-title mb0 tc mw7-ns center">
-          <a href="{{url}}" class="no-underline">
+          <a href="{{url}}" class="no-underline black-80">
             {{title}}
           </a>
         </h1>
-      <div class="gh-post-meta tc sans-serif f5">
+      <div class="gh-post-meta tc sans-serif f6 black-40">
         <time datetime="{{date format="YYYY-MM-DD"}}">
           {{date format="MMM DD, YYYY"}}
         </time>
       </div>
 
       {{#if custom_excerpt}}
-        <p class="measure center" >{{custom_excerpt}}</p>
+        <p class="measure-wide center" >{{custom_excerpt}}</p>
       {{/if}}
 
       {{#if feature_image}}
@@ -24,7 +24,7 @@
       {{/if}}
     </header>
 
-    <div class="gh-content gh-canvas measure center">
+    <div class="gh-content gh-canvas measure-wide center">
       {{content}}
     </div>
   </article>

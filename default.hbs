@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- <link href="https://fonts.googleapis.com/css2?family=Cousine&family=Lato&Roboto+Slab&family=Merriweather:wght@700&display=swap" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css2?family=Cousine&family=Lato&family=Merriweather&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cousine&family=Domine&family=Lato&family=Merriweather&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css" />
@@ -18,10 +18,10 @@
   {{!-- Outputs SEO meta+structured data and important settings, should always be in <head> --}}
 
 </head>
-<body class="{{body_class}} serif mid-gray pa3">
+<body class="{{body_class}} serif black-70 pa3">
   <div id="site" class="mw-100 center ">
 
-    <header id="site-header" class="mb0 measure center sans-serif">
+    <header id="site-header" class="mb0 measure-wide center sans-serif">
       <nav class="sans-serif cf">
         <h1 class="mb1 mt0 tc f4 sans-serif ttu">
           <a class="title no-underline" href="{{@site.url}}">{{@site.title}}</a>
@@ -34,7 +34,7 @@
       {{{body}}}
     </main>
 
-    <footer class="mb0 center pt2 pb4 w-100 measure mt0">
+    <footer class="mb0 center pt2 pb4 w-100 measure-wide mt0">
       <div class="f6 tc light-silver">&copy; 2019-{{date format="YYYY"}} Peter Bui</div>
     </footer>
   </div>
