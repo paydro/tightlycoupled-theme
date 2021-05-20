@@ -16,35 +16,39 @@
 /* Tachyons large (*-l) overrides -- copied definition from tachyons */
 @media screen and (min-width: 60em) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 
 .serif {
-  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Roboto Slab', serif; */
+  font-family: 'Merriweather', serif;
 }
 
 .sans-serif {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .merriweather {
   font-family: 'Merriweather';
 }
 
+/* .lh-copy { line-height: 1.6; } */
+
 h1 {
   font-family: 'Merriweather', serif;
   font-weight: normal;
-  /* font-style: italic; */
-  color: #333;
+  color: rgba( 0, 0, 0, .7 );
 }
 
 
 h2, h3, h4, h5, h6 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  color: #222;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: rgba( 0, 0, 0, .7 );
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 #site-header nav ul li:before {
@@ -56,20 +60,25 @@ h2, h3, h4, h5, h6 {
 }
 
 code, .code {
-  font-family: "Cousine", monospace;
+  font-family: "Courier Prime", monospace;
 }
 
+pre[class*=language],
 pre code,
 pre code[class*=language-] {
-  font-family: "Cousine", monospace;
-  font-size: 1rem;
+  font-family: "Courier Prime", monospace;
   overflow: auto;
+  font-size: 0.875rem;
+  line-height: 1.1;
+  text-shadow: none;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background-color: transparent;
-  padding: 0;
+  background-color: #f0f0f0;
+  /* padding: 1rem 0.rem; */
+  /* padding: 0.875rem; */
+  margin: 1rem 0;
 }
 
 pre code {
@@ -94,7 +103,7 @@ nav a:visited {
 }
 
 a, a:visited {
-  color: rgba(0,0,0,.6);
+  color: rgba(0,0,0,.7);
 }
 
 a:hover {
@@ -189,6 +198,19 @@ article figcaption {
   max-width: none;
   transform: translateX(-50%);
   width: 100vw;
+}
+
+.kg-bookmark-card,
+.kg-bookmark-container,
+.kg-bookmark-content,
+.kg-bookmark-title,
+.kg-bookmark-description,
+.kg-bookmark-metadata,
+.kg-bookmark-icon,
+.kg-bookmark-author,
+.kg-bookmark-publisher,
+.kg-bookmark-thumbnail {
+
 }
 
 /* Tachyons Not Small (*-ns) Overrides -- copied definition from tachyons */
