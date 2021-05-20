@@ -200,19 +200,6 @@ article figcaption {
   width: 100vw;
 }
 
-.kg-bookmark-card,
-.kg-bookmark-container,
-.kg-bookmark-content,
-.kg-bookmark-title,
-.kg-bookmark-description,
-.kg-bookmark-metadata,
-.kg-bookmark-icon,
-.kg-bookmark-author,
-.kg-bookmark-publisher,
-.kg-bookmark-thumbnail {
-
-}
-
 /* Tachyons Not Small (*-ns) Overrides -- copied definition from tachyons */
 @media screen and (min-width: 30em) {
 }
