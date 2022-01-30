@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Peter Bui</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro&display=swap');
+
+body {
+    color: #000000;
+    /* background: #EFEFEF; */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 40px 0;
+}
+#resume {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 40px 60px;
+    background: #FFFFFF;
+    /* border: 1px solid #CCCCCC; */
+    /* box-shadow: 2px 2px 4px #AAAAAA; */
+    /* -webkit-box-shadow: 2px 2px 4px #AAAAAA; */
+}
+h1 {
+    font-family: "Merriweather";
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 200%;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-family: "Merriweather";
+    border-bottom: 1px solid #000000;
+    text-transform: uppercase;
+    font-size: 150%;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+h3 {
+    font-family: "Merriweather";
+    font-size: 100%;
+    margin: 0.8em 0 0.3em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 .company {
+  font-weight: normal;
+}
+
+h3 .dates {
+  font-weight: normal;
+  font-style: italic;
+}
+
+p {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0 1.5em;
+}
+
+/* ul immediately after h1 = contact list */
+h1 + ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    }
+h1 + ul > li {
+    display: inline;
+    white-space: pre;
+    list-style-type: none;
+}
+h1 + ul > li:after {
+    content: "  \2022  ";
+}
+h1 + ul > li:last-child:after {
+    content: "";
+}
+/* p immediately after contact list = summary */
+h1 + ul + p {
+    margin: 1em 0;
+}
+
+@media print {
+    body {
+        font-size: 9pt;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+
+    #resume {
+        margin: 0;
+        padding: 0;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    h1 {
+      font-size: 18pt;
+    }
+
+    h2 {
+      font-size: 15pt;
+    }
+
+    h3 {
+      font-size: 11pt;
+    }
+
+    /* Make links black in PDF */
+    /* Move this outside the print block to apply this in HTML too */
+    a, a:link, a:visited, a:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+@page {
+    /* Change margins and paper size of PDF */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
+    size: letter;
+    margin: 0.5in 0.8in;
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 16pt;
+        margin: 0;
+        padding: 0;
+        background: #FFFFFF !important;
+    }
+    #resume {
+        margin: 0;
+        padding: 1em;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+
+</style>
+</head>
+<body>
+<div id="resume">
+<!-- The (first) h1 will be used as the <title> of the HTML page -->
+<h1>Peter Bui</h1>
+<!-- The unordered list immediately after the h1 will be formatted on a single
+line. It is intended to be used for contact details -->
+<ul>
+<li>paydrobui@gmail.com</li>
+<li>Alameda, CA (SF Bay Area)</li>
+</ul>
+<!-- The paragraph after the h1 and ul and before the first h2 is optional. It
+is intended to be used for a short summary. -->
+<p>I&rsquo;m looking to transition back into an individual contributor role as a software
+engineer. I bring strong mentorship, technical leadership, project management
+skills, and a track record for delivering large projects.</p>
+<h2>Skills</h2>
+<ul>
+<li>Languages: Ruby, Bash, Go, Python</li>
+<li>Technologies: AWS, Kubernetes, Spinnaker, Jenkins/CI, SaltStack, Chef, Cloudformation, Terraform, Ansible, Postgres, MySQL, Redis</li>
+<li>Other: CI/CD, OOP, TDD, Distributed Systems, Mentoring, Project Management</li>
+</ul>
+<h2>Experience</h2>
+<!-- You have to wrap the "left" and "right" half of these headings in spans by
+hand -->
+<h3><span>Engineering Manager, Cloud Engineering</span> <span class="company">Autodesk Construction Solutions <span class="dates">Feb 2019 &ndash; May 2021</span></span></h3>
+<p><em>Acquired PlanGrid Feb 2019</em></p>
+<ul>
+<li>Started as the engineer overseeing 20 datastores in a single US region. Grew
+  the team to 8 engineers that managed 200+ datastores (RDS Postgres, AWS
+  Elasticache Redis, AWS Elastisearch) across four different regions (Australia,
+  EMEA, 2x US).</li>
+<li>Led effort to migrate two large monolith service databases (4TB Postgres, 2TB Mongo database) to RDS Aurora and MongoDB Atlas, respectively, and designed the migrations to fit within a two-hour downtime window for each database. As a result, the effort reduced RTO from 2 hours to 20 minutes for both databases and reclaimed 8-weeks of person-hours per year for maintenance.</li>
+<li>Designed the migration strategy to migrate old Cloudformation-managed Kubernetes applications to Terraform-managed AWS EKS clusters with zero downtime.</li>
+<li>Promoted and designed API interfaces for inter-team communication to move away from JIRA ticket-based requests.</li>
+<li>Developed a project execution process that leads to delivering 80% of projects on time for four quarters in a row. Evangelized, trained, and standardized the process with two peer teams resulting in similar delivery rates.</li>
+<li>Reviewed, coached, and set a standard for engineering change proposals within the organization.</li>
+<li>Continuously educated/trained engineering teams on database self-service tools and database management practices to increase development team velocity when building features.</li>
+</ul>
+<!-- Management level bullet points -->
+<!-- * Developed team maintenance process that ensured upwards to 20% of time fixing -->
+<!--   and maintaining existing systems to reduce bit rot. -->
+<!-- * Lead an reorganization within the infrastructure group to better align with -->
+<!--   higher level goals. -->
+<!-- * Mentored two direct reports into senior and principal engineering roles. -->
+<!-- * Built a vulnerable space that enabled engineers to voice their opinions
+       freely. -->
+<!-- * Developed a the team into a tight and cohesive unit. Team members trusted one -->
+<!--   another and would help without being asked. They took over on-call duties -->
+<!--   when others were woken up at night. -->
+
+<h3><span>Principal Engineer, Tech Lead, Database Infrastructure</span> <span class="company">PlanGrid <span class="dates">2018 &ndash; 2019</span></span></h3>
+<ul>
+<li>Led a year-long project to provision a second region for PlanGrid products in a repeatable manner with three teams totaling 15 engineers. The system used Terraform/Terragrunt to provision a new region from scratch with a VPC, Kubernetes clusters, Spinnaker, and 40+ AWS datastores (Postgres/Redis) in two weeks. This system has since provisioned three additional regions since inception driving revenue for ACS that was not possible.</li>
+<li>Learned project leading, starting with a single project with two developers. By the end of my tech lead tenure, I ran 2-3 simultaneous projects at a time with 2-3 developers per project that exected between 2-3 months.</li>
+<li>Redesigned and migrated bespoke 3TB Postgres cluster architecture to enable a reduction of RTO from 48 hours to 2 hours and RPO from 24 hours to a few seconds.</li>
+<li>Took on a daunting task to develop the database strategy for the engineering organization that would lead/forced engineering teams to move towards a service-oriented architecture and enable multi-region deployments.</li>
+<li>Wrote and utilized written engineering proposals to persuade, cooperate, and lead design changes to the distributed systems across the team and within the engineering organization.</li>
+<li>Developed a standard postgres configuration based on prior incidents for all Postgres databases enabling faster feedback loops and removing long-running queries from consuming all database resources. I&rsquo;ve documented this strategy in <a href="https://tightlycoupled.io/my-goto-postgres-configuration-for-web-services/">My GOTO postgres configuration for web services</a>.</li>
+</ul>
+<!-- * Ran DB council to catch errors and slow down changes to the monolith database.  This created pressure for teams to look at alternatives to split their code into smaller services. -->
+
+<h3><span>Infrastructure Engineer, Cloud Infrastructure</span> <span class="company">PlanGrid <span class="dates">2016 &ndash; 2018</span></span></h3>
+<ul>
+<li>Replaced critical EC2 scaling system with more performant auto-scaling system built with Cloudformation, EC2 Auto Scaling Groups, SaltStack, Docker containers, and a golang command-line deployment tool. As a result, it reduced critical asynchronous job processing time by 95% and reduced incidents by 50%.</li>
+<li>Migrated PlanGrid&rsquo;s compute infrastructure from Heroku to AWS, Kubernetes, and Spinnaker with zero downtime and paved the way for achieving SOC2 Type II certification.</li>
+<li>Replaced bespoke manual/Ansible-based configuration system with a highly available setup for SaltStack Masters that manages all on-instance configuration for every EC2 instance in PlanGrid&rsquo;s AWS infrastructure.</li>
+<li>Studied and developed Infrastructure as Code techniques with Cloudformation and git to manage PlanGrid AWS cloud infrastructure. In addition, I promoted the methodology to the rest of the team. As a result, we replaced 95% of AWS resources in staging and production environments with infrastructure as code in two years.</li>
+<li>Stepped up to help educate and standardize the method of releasing schema changes to our monolithic 2TB postgres database for 20 backend engineers.</li>
+</ul>
+<h3><span>Senior Software Engineer</span> <span class="company">8tracks <span class="dates">2011 &ndash; 2016</span></span></h3>
+<p><em>Wore many hats: frontend, backend, infrastructure.</em></p>
+<ul>
+<li>Replaced Solr-based search faceted browsing system with Redis sorted sets that covered 95% of the original feature set but 35% increase in performance and scalability.</li>
+<li>Rebuilt the site&rsquo;s music player MySQL backend with a combination of MySQL and Redis that enabled TTL-based records without requiring DELETE queries from slowing down the performance of the database.</li>
+<li>Maintained a 99th percentile database latency of 10ms for queries for the central Ruby on Rails application with aggressive caching, query optimization, and schema denormalization.</li>
+<li>Replaced a ruby-based, async job, image resizer with golang-based, docker containerized, dynamic HTTP resizer to increase the speed at which the development team could release new designs to meet advertisement demands.</li>
+<li>Built and customized a Varnish load balancer to handle spikes in traffic due to Justin Bieber fans swarming the site.</li>
+<li>Built metrics observability with Graphite and statsd to enable better debugging of our distributed system.</li>
+<li>Managed the AWS cloud infrastructure using Chef and Knife</li>
+</ul>
+<h3><span>Senior Software Engineer</span> <span class="company">New Relic <span class="dates">2010 &ndash; 2010</span></span></h3>
+<ul>
+<li>Ruby on Rails backend software engineer developing tools to enable our Sales organization win deals.</li>
+</ul>
+<h3><span>Software Engineer</span> <span class="company">Affinity Labs <span class="dates">2007 &ndash; 2010</span></span></h3>
+<ul>
+<li>Honed my skills as a Ruby on Rails fullstack software developer.</li>
+</ul>
+<h3><span>Software Engineer</span> <span class="company">Sparkart <span class="dates">2005 &ndash; 2007</span></span></h3>
+<ul>
+<li>Began my journey learning fullstack development with PHP, Ruby on Rails, MySQL, prototype.js, and jQuery.</li>
+</ul>
+<h2>Education</h2>
+<p><span>University of Texas at Austin, BS Computer Science</span> <span>2005</span></p></div>
+</body>
+</html>
